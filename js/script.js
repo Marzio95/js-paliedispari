@@ -10,16 +10,26 @@ function numeroCasuale(){
 }
 
 
-let randomNumber = Math.floor(Math.random() * 5) + 1;
+let randomNumber = numeroCasuale();
 console.log(randomNumber);
 
 
 let somma = userNumber + randomNumber;
 console.log(somma);
 
-if (somma % 2 == 0 && userScelta == 'pari'){
+function pariFunz(numb){
+    let pariNumeri = numb % 2 == 0;
+    return true;
+} 
+
+function dispariFunz(numb){
+    let dispariNumeri = numb % 2 == 1;
+    return true;
+}
+
+if (pariFunz(somma) && userScelta == 'pari'){
     console.log('win')
-} else if (somma % 2 == 1 && userScelta == 'dispari') {
+} else if (dispariFunz(somma) && userScelta == 'dispari') {
     console.log('win');
 } else {
     console.log('loose');
