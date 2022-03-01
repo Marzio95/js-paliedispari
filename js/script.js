@@ -1,4 +1,5 @@
 
+/*
 let userScelta = prompt('Scegli tra pari o dispari:');
 console.log(userScelta);
 let userNumber = parseInt(prompt('Scegli un numero tra 1 e 5:'));
@@ -35,16 +36,24 @@ if (pariFunz(somma) && userScelta == 'pari'){
     console.log('loose');
 }
 
+*/
 
+//PALINDROMO 
 
-// if (userScelta == pari){
-   
-// } else {
-//     console.log(loose)
-// }
+let userWord = prompt('Inserisci una parola:');
+console.log(userWord);
 
-// if (userScelta == dispari){
-//     console.log(win)
-// } else {
-//     console.log(loose)
-// }
+    let reverseWord = '';
+
+    for(let i = userWord.length - 1; i >= 0; i--){
+    reverseWord += userWord[i];
+    console.log(reverseWord);
+    }
+
+    console.log(reverseWord);
+
+if (userWord == reverseWord){
+    console.log('palindromo')
+} else {
+    console.log('parola non palindroma')
+}
