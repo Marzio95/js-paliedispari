@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: lightseagreen;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+#check_word{
+    height: 2rem;
+    width: 20rem;
+}
+
+#verifica_button{
+    margin-top: 2rem;
+    width: 5rem;
+    height: 3rem;
+}
+
+.reverse_word{
+    margin: 3rem;
+}

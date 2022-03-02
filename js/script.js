@@ -40,27 +40,38 @@ if (pariFunz(somma) && userScelta == 'pari'){
 
 //PALINDROMO 
 
-let userWord = prompt('Inserisci una parola:');
+let checkInput = document.getElementById('check_word'); 
+console.log(checkInput.value);
+let userWord = checkInput.value;
 console.log(userWord);
+let outPutPalindromia = document.querySelector('.palindromia');
+console.log(outPutPalindromia);
+let outPutReverseWord = document.querySelector('.reverse_word');
+console.log(outPutReverseWord)
+let verificaBtn = document.getElementById('verifica_button');
+console.log(verificaBtn);
 
-
-function palindromo(word){
+function palindromoFunction(word){
     let reverseWord = '';
+    outPutReverseWord.innerHTML += reverseWord;
     for(let i = word.length - 1; i >= 0; i--){
-    reverseWord += word[i];
-    console.log(reverseWord);
+        reverseWord += word[i];
+        console.log(reverseWord);
     }
     if (word == reverseWord){
-    return true;
+        return true;
     } else {
         return false;
-    }
-    
+    }    
 }
 
+verificaBtn.addEventListener('click', palindromoFunction);
 
-if (palindromo(userWord)){
-    console.log('palindromo')
+if (palindromoFunction(userWord)){
+    outPutPalindromia.innerHTML += ' Palindroma';
+    console.log(outPutPalindromia.innerHTML)
 } else {
-    console.log('parola non palindroma')
+    outPutPalindromia.innerHTML += ' NON Palindroma';
+    console.log(outPutPalindromia.innerHTML)
 }
+
